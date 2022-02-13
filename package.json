@@ -1,0 +1,29 @@
+{
+  "name": "simple-bot-discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/just-a-regular-team/Simple-bot-discord.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/just-a-regular-team/Simple-bot-discord/issues"
+  },
+  "homepage": "https://github.com/just-a-regular-team/Simple-bot-discord#readme",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^13.6.0",
+    "express": "^4.17.2",
+    "glob": "^7.2.0",
+    "node-fetch": "^2.6.7",
+    "random-puppy": "^1.1.0",
+    "util": "^0.12.4"
+  }
+}
