@@ -67,5 +67,54 @@ const {Perms} = require('../Validation/Permissions.js');
             await MainGuild.commands.permissions.set({fullPermissions});
         })
     })
-   
-}
+
+
+
+   // My Test New Handle Event 
+    {//==//Erorr here ,something was wrong 
+      const controlCommand = [];
+      let _0x46e7bc = new Boolean(true);
+      const Table = new Ascii("Command controls");
+      
+   (await PG(`${process.cwd()}/Module/Controls/*/*.js`)).map(async (file) =>{
+     const _0x2723e6 = require(file);
+     
+      if(!_0x2723e6.name) {
+       let _0x46e7bc = false;
+      return Table.addRow(file.split('/')[7], "File miss a name", "❗ " );
+      }
+     
+      if(!_0x2723e6.description)
+      return Table.addRow(_0x2723e6.name, "File miss a description", "❗ " );
+
+      if(!_0x2723e6.permission)
+      {
+        if(Perms.includes(_0x2723e6.permission))
+        _0x2723e6.defaultPermission = false;
+        else
+        return Table.addRow(_0x2723e6.name, "File miss a permission", "❗ " );
+      }
+
+     controlCommand.push(_0x2723e6);
+     await Table.addRow(_0x2723e6.name, "✅ ", "✅ " );
+   })
+      
+     console.log(Table.toString());
+      
+      if(_0x46e7bc ){
+        console.log("/??");
+        module.exports.run = async function(msg){
+          let tokens = msg.content.split(' ');
+          let command = tokens.shift();
+          if (command.charAt(0) === '!') {
+          command = command.substring(1);
+          commands[command](msg, tokens);}
+        }
+      }else {
+        console.log("ControlCommand is ERORR")
+        return null;
+      }
+   }//==
+}//END
+
+ 

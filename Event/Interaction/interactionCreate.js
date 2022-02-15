@@ -6,7 +6,7 @@ module.exports ={
      * @param {CommandInteraction} interaction
      * @param {Client} client
      */
-    async run(interaction, client){
+    async run(message,interaction, client){
         if(interaction.isCommand())
         {
             const command = client.commands.get(interaction.commandName);
@@ -20,3 +20,4 @@ module.exports ={
         }
     }
 }
+//commands
